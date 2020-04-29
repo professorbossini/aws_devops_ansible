@@ -1,0 +1,13 @@
+---
+# tasks file for php
+- name: Instalar o PHP 7 com os pacotes mais comuns
+  yum:
+    name: php
+    state: present
+  notify: reiniciar Apache
+- name: Fazer upload do arquivo index.php
+  copy:
+    src: index.php
+    dest: /var/www/html
+    owner: ec2-user
+    group: ec2-user

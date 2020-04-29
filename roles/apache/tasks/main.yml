@@ -1,0 +1,10 @@
+---
+# tasks file for apache
+- name: Desinstalar o pacote httpd
+  yum:
+    name: httpd
+    state: absent
+- name: Desinstalar o pacote httpd-tools
+  yum:
+    name: httpd-tools
+    state: absent
